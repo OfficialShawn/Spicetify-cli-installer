@@ -1,2 +1,4 @@
 # Spicetify-cli-installer
-https://github.com/khanhas/Spicetify
+More automated installer for https://github.com/khanhas/spicetify-cli
+
+Just run install.ps1 using powershell and everything will be configured for you.
