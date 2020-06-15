@@ -17,11 +17,14 @@ IF '%choice%'=='2' GOTO END
 :THEMES
 POWERSHELL -command "Expand-Archive -LiteralPath 'Themes.zip' -DestinationPath %cd%"
 TIMEOUT 5 > NUL
+CD C:\Users\%username%\spicetify-cli\Themes
+MKDIR Flatten
+MKDIR Bloody
 CD %DIR%\Themes\Flatten
-COPY "%DIR%\Themes\Flatten\color.ini"  "C:\Users\%username%\spicetify-cli\Themes"
-COPY "%DIR%\Themes\Flatten\user.css"  "C:\Users\%username%\spicetify-cli\Themes"
-COPY "%DIR%\Themes\Flatten\user.sass"  "C:\Users\%username%\spicetify-cli\Themes"
+COPY "%DIR%\Themes\Flatten\color.ini"  "C:\Users\%username%\spicetify-cli\Themes\Flatten"
+COPY "%DIR%\Themes\Flatten\user.css"  "C:\Users\%username%\spicetify-cli\Themes\Flatten"
+COPY "%DIR%\Themes\Flatten\user.sass"  "C:\Users\%username%\spicetify-cli\Themes\Flatten"
 CD %DIR%\Themes\Bloody
-COPY "%DIR%\Themes\Bloody\color.ini"  "C:\Users\%username%\spicetify-cli\Themes"
-COPY "%DIR%\Themes\Bloody\user.css"  "C:\Users\%username%\spicetify-cli\Themes"
+COPY "%DIR%\Themes\Bloody\color.ini"  "C:\Users\%username%\spicetify-cli\Themes\Bloody"
+COPY "%DIR%\Themes\Bloody\user.css"  "C:\Users\%username%\spicetify-cli\Themes\Bloody"
 :END
